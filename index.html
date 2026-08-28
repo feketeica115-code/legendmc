@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>LegendMC - Magyarország legnagyobb Minecraft szervere</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ================= 1. FŐOLDAL NÉZET ================= -->
+    <div id="home-view" class="view-section active">
+        <header class="header">
+            <div class="container header-content">
+                <div class="logo-text">LegendMC</div>
+                <div style="display: flex; gap: 10px; align-items: center;">
+                    <button class="cta-button" style="padding: 8px 16px; font-size: 13px;" onclick="showLogin()">Bejelentkezés</button>
+                    <button class="menu-toggle">&#9776;</button>
+                </div>
+            </div>
+        </header>
+
+        <section class="hero">
+            <div class="container">
+                <p class="hero-pretitle">Gondolkodtál már azon, hogy...</p>
+                <h1>Milyen érzés lehet Magyarország <span class="highlight">legnagyobb</span> Minecraft szerverén játszani?</h1>
+                <p class="hero-description">Légy te is részese az évek óta rendíthetetlen, élményekkel teli közösségnek!</p>
+                <button class="cta-button" onclick="showRegister()">Regisztráció</button>
+            </div>
+        </section>
+
+        <section class="steps container">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <h2>REGISZTRÁCIÓ</h2>
+                <p>Válassz tetszőleges felhasználónevet és regisztrálj weboldalunkon! Ügyelj rá, hogy helyes e-mail-címet adj meg nekünk, hiszen erre sokszor szükséged lesz a jövőben.</p>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <h2>KLIENS LETÖLTÉSE</h2>
+                <p>Töltsd le a hivatalos LegendMC klienst. Alább olvashatsz arról, hogy ez milyen előnyökkel jár. Ha bármiben elakadsz, kérj bátran segítséget tőlünk!</p>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <h2>BELÉPÉS ÉS JÁTÉK!</h2>
+                <p>Jelentkezz be a kliensbe a regisztrált felhasználóddal, esetleg állíts be egy skint, vagy köpenyt. Kattints a "Játék indítása" gombra, és már kezdődhet az önfeledt játék!</p>
+            </div>
+        </section>
+
+        <section class="phoenix-section">
+            <div class="container">
+                <div class="phoenix-box">🔥</div>
+                <p style="color: #94a3b8;">Új vagy? <a href="#" style="color: #ff7700; text-decoration: underline;">Segítünk!</a></p>
+            </div>
+        </section>
+
+        <section class="community">
+            <div class="container">
+                <div class="stats">
+                    <h2>400.000+ játékos</h2>
+                    <p>már kipróbálta</p>
+                    <p style="margin-bottom: 20px;">Légy te a következő!</p>
+                </div>
+                <button class="cta-button" onclick="showRegister()">Csatlakozom</button>
+                
+                <div class="skins-showcase">
+                    <div class="skin skin-1"></div>
+                    <div class="skin skin-2"></div>
+                    <div class="skin skin-3"></div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <div style="font-size: 18px; letter-spacing: 8px; color: #ff7700; margin-bottom: 20px;">💬 🎮 📸 ▶️ 🌐</div>
+                <div class="legal-text">
+                    <h3 style="margin-top:0;">Disclaimer</h3>
+                    <p>LegendMC is not in any way affiliated with or supported by Minecraft, Mojang AB and/or Microsoft.</p>
+                    
+                    <h3>Partnereink</h3>
+                    <p>Artillex Studios, HappyLab, RivalsNetwork, YourSitee</p>
+
+                    <h3>Dokumentumok</h3>
+                    <p>Impresszum • Játékszabályzat • Adatvédelmi nyilatkozat • ÁSZF</p>
+                </div>
+                <div class="operator-info">
+                    <h3>Üzemeltető</h3>
+                    <p>Sebestyén Ádám EV. • 59797779-1-33 • 2118 Dány, Fő utca 87.</p>
+                </div>
+                <div style="margin-top: 20px; text-align: center; color: #475569;">
+                    <p>&copy; 2026 LegendMC. Minden jog fenntartva.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+    <!-- ================= 2. REGISZTRÁCIÓS NÉZET ================= -->
+    <div id="register-view" class="view-section">
+        <div class="register-wrapper">
+            <div class="reg-header">
+                <span>🔥</span>
+                <span class="brand-name">LEGENDMC</span>
+            </div>
+
+            <h1>Regisztráció</h1>
+            <p class="subtitle">Hozd létre a fiókodat pár lépésben.</p>
+
+            <form onsubmit="event.preventDefault(); alert('Sikeres regisztráció!');">
+                <div class="input-group">
+                    <label>JÁTÉKOS NÉV *</label>
+                    <div class="input-wrapper">
+                        <span class="icon">👤</span>
+                        <input type="text" placeholder="Játékos név" required>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>EMAIL CÍM *</label>
+                    <div class="input-wrapper">
+                        <span class="icon">✉️</span>
+                        <input type="email" placeholder="Valós Email cím" required>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>EMAIL CÍM ÚJRA *</label>
+                    <div class="input-wrapper">
+                        <span class="icon">✉️</span>
+                        <input type="email" placeholder="Valós Email cím újra" required>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>SZÜLETÉSI DÁTUM *</label>
+                    <div class="date-selects">
+                        <select required>
+                            <option value="">- év</option>
+                            <option>2010</option><option>2009</option><option>2008</option><option>2007</option><option>2006</option><option>2005</option><option>2004</option><option>2003</option><option>2002</option><option>2001</option><option>2000</option>
+                        </select>
+                        <select required>
+                            <option value="">- hónap</option>
+                            <option>Január</option><option>Február</option><option>Március</option><option>Április</option><option>Május</option><option>Június</option><option>Július</option><option>Augusztus</option><option>Szeptember</option><option>Október</option><option>November</option><option>December</option>
+                        </select>
+                        <select required>
+                            <option value="">- nap</option>
+                            <option>1</option><option>5</option><option>10</option><option>15</option><option>20</option><option>25</option><option>30</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>JELSZÓ *</label>
+                    <div class="input-wrapper">
+                        <span class="icon">🔒</span>
+                        <input type="password" placeholder="Jelszó" required>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>JELSZÓ ÚJRA *</label>
+                    <div class="input-wrapper">
+                        <span class="icon">🔒</span>
+                        <input type="password" placeholder="Jelszó újra" required>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>KI HÍVOTT MEG?</label>
+                    <div class="input-wrapper">
+                        <span class="icon">👤</span>
+                        <input type="text" placeholder="Ki hívott meg? (nem kötelező)">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>KUPONKÓD</label>
+                    <div class="input-wrapper">
+                        <span class="icon">🏷️</span>
+                        <input type="text" placeholder="Kuponkód (nem kötelező)">
+                    </div>
+                </div>
+
+                <div class="checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" required>
+                        <span>Elfogadom az <a href="#">ÁSZF</a>-et és egyetértek az <a href="#">Adatvédelmi nyilatkozattal</a>.</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox">
+                        <span>Hozzájárulok a marketing célú 
+                            <select class="inline-select">
+                                <option>Email és SMS</option>
+                                <option>Csak Email</option>
+                            </select> 
+                            megkeresésekhez.</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" required>
+                        <span>Megerősítem, hogy a 14. életévemet betöltöttem.</span>
+                    </label>
+                </div>
+
+                <p class="login-redirect">Már van fiókod? <a href="#" onclick="showLogin(); return false;">Bejelentkezés!</a></p>
+
+                <button type="submit" class="cta-button" style="width: 100%;">REGISZTRÁCIÓ &rarr;</button>
+            </form>
+
+            <a class="back-link" onclick="showHome()">&larr; Vissza a főoldalra</a>
+        </div>
+    </div>
+
+
+    <!-- ================= 3. BEJELENTKEZÉSI NÉZET ================= -->
+    <div id="login-view" class="view-section">
+        <div class="register-wrapper">
+            <div class="reg-header">
+                <span>🔥</span>
+                <span class="brand-name">LEGENDMC</span>
+            </div>
+
+            <h1>Bejelentkezés</h1>
+            <p class="subtitle">Üdv újra! Lépj be a fiókodba.</p>
+
+            <form onsubmit="event.preventDefault(); alert('Sikeres bejelentkezés!');">
+                <div class="input-group">
+                    <label>JÁTÉKOS NÉV VAGY EMAIL *</label>
+                    <div class="input-wrapper">
+                        <span class="icon">👤</span>
+                        <input type="text" placeholder="Játékos név vagy Email" required>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>JELSZÓ *</label>
+                    <div class="input-wrapper">
+                        <span class="icon">🔒</span>
+                        <input type="password" placeholder="Jelszó" required>
+                    </div>
+                </div>
+
+                <p class="login-redirect">Még nincs fiókod? <a href="#" onclick="showRegister(); return false;">Regisztráció!</a></p>
+
+                <button type="submit" class="cta-button" style="width: 100%;">BEJELENTKEZÉS &rarr;</button>
+            </form>
+
+            <a class="back-link" onclick="showHome()">&larr; Vissza a főoldalra</a>
+        </div>
+    </div>
+
+
+    <script>
+        function showRegister() {
+            document.getElementById('home-view').classList.remove('active');
+            document.getElementById('login-view').classList.remove('active');
+            document.getElementById('register-view').classList.add('active');
+            window.scrollTo(0, 0);
+        }
+
+        function showLogin() {
+            document.getElementById('home-view').classList.remove('active');
+            document.getElementById('register-view').classList.remove('active');
+            document.getElementById('login-view').classList.add('active');
+            window.scrollTo(0, 0);
+        }
+
+        function showHome() {
+            document.getElementById('register-view').classList.remove('active');
+            document.getElementById('login-view').classList.remove('active');
+            document.getElementById('home-view').classList.add('active');
+            window.scrollTo(0, 0);
+        }
+    </script>
+</body>
+</html>

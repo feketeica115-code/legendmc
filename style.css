@@ -1,0 +1,373 @@
+/* --- ALAPBEÁLLÍTÁSOK --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #0b0f19;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* --- NÉZET VÁLTÓ OSZTÁLYOK --- */
+.view-section {
+    display: none;
+}
+
+.view-section.active {
+    display: block;
+}
+
+/* --- 1. FŐOLDAL STÍLUSOK --- */
+.header {
+    background-color: rgba(11, 15, 25, 0.95);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid #ff7700;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-text {
+    font-size: 26px;
+    font-weight: 800;
+    color: #ff7700;
+    text-transform: uppercase;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+.hero {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.hero-pretitle {
+    color: #ff9933;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.hero h1 {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero h1 .highlight {
+    color: #ff7700;
+}
+
+.hero-description {
+    color: #94a3b8;
+    margin-bottom: 30px;
+    font-size: 15px;
+}
+
+.cta-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #ff7700, #ff5500);
+    color: #ffffff;
+    padding: 15px 40px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 30px;
+    text-transform: uppercase;
+    box-shadow: 0 4px 15px rgba(255, 119, 0, 0.4);
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.steps {
+    padding: 20px 20px;
+}
+
+.step-card {
+    background-color: #121824;
+    border-radius: 16px;
+    padding: 25px;
+    margin-bottom: 20px;
+    border: 1px solid #222d42;
+}
+
+.step-number {
+    background: linear-gradient(135deg, #ff7700, #ff5500);
+    color: #ffffff;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.step-card h2 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.step-card p {
+    color: #94a3b8;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.phoenix-section {
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.phoenix-box {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.community {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #121824;
+    border-top: 1px solid #222d42;
+    border-bottom: 1px solid #222d42;
+}
+
+.stats h2 {
+    font-size: 26px;
+    font-weight: 800;
+    color: #ff7700;
+}
+
+.stats p {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.skins-showcase {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.skin {
+    width: 70px;
+    height: 70px;
+    background-color: #222d42;
+    border-radius: 50%;
+    border: 3px solid #ff7700;
+    background-size: cover;
+    background-position: center;
+}
+
+.skin-1 { background-image: url('https://mc-heads.net/avatar/creeper/70'); }
+.skin-2 { background-image: url('https://mc-heads.net/avatar/steve/70'); }
+.skin-3 { background-image: url('https://mc-heads.net/avatar/alex/70'); }
+
+.footer {
+    padding: 30px 20px;
+    background-color: #070a11;
+    font-size: 13px;
+    color: #64748b;
+}
+
+.legal-text h3, .operator-info h3 {
+    font-size: 14px;
+    color: #ffffff;
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+
+/* --- 2. REGISZTRÁCIÓS ÉS BEJELENTKEZÉSI NÉZET STÍLUSOK --- */
+.register-wrapper {
+    padding: 20px 20px 50px 20px;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.reg-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.brand-name {
+    color: #ff7700;
+    font-weight: 800;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.register-wrapper h1 {
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #94a3b8;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.input-group {
+    margin-bottom: 18px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    color: #ff7700;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+}
+
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    background-color: #121824;
+    border: 1px solid #222d42;
+    border-radius: 12px;
+    padding: 0 15px;
+    height: 50px;
+}
+
+.input-wrapper:focus-within {
+    border-color: #ff7700;
+}
+
+.input-wrapper .icon {
+    margin-right: 10px;
+    font-size: 15px;
+}
+
+.input-wrapper input {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 14px;
+    width: 100%;
+    outline: none;
+}
+
+.input-wrapper input::placeholder {
+    color: #64748b;
+}
+
+.date-selects {
+    display: flex;
+    gap: 10px;
+}
+
+.date-selects select {
+    flex: 1;
+    background-color: #121824;
+    border: 1px solid #222d42;
+    border-radius: 12px;
+    color: #ffffff;
+    padding: 0 10px;
+    height: 50px;
+    font-size: 13px;
+    outline: none;
+}
+
+.checkbox-group {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 12px;
+    color: #cbd5e1;
+    line-height: 1.4;
+    cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+    accent-color: #ff7700;
+    width: 16px;
+    height: 16px;
+    margin-top: 2px;
+}
+
+.checkbox-label a {
+    color: #ff7700;
+    text-decoration: underline;
+}
+
+.inline-select {
+    background: #121824;
+    border: 1px solid #222d42;
+    color: #ffffff;
+    padding: 2px 4px;
+    border-radius: 6px;
+    font-size: 11px;
+    outline: none;
+}
+
+.login-redirect {
+    font-size: 13px;
+    color: #94a3b8;
+    margin-bottom: 20px;
+}
+
+.login-redirect a {
+    color: #ff7700;
+    font-weight: 600;
+}
+
+.back-link {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    color: #94a3b8;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.back-link:hover {
+    color: #ff7700;
+}
